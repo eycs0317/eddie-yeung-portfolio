@@ -121,7 +121,17 @@ const Portfolio = () => {
         {/* 8. Projects (Extra Wide) */}
         <Projects
           title='Monchhichi E-card Kiosk'
-          description='Interactive 55" touchscreen experience for HK MTR malls. Users design custom digital cards and retrieve them via QR code.'
+          description={
+            <>
+              Interactive 55" touchscreen experience for HK MTR malls. Users
+              design custom digital cards and retrieve them via QR code.
+              <span className='mt-2 text-xs text-slate-400 italic'>
+                *In the original kiosk version, a QR code was provided to
+                download the E-card. This demo version is optimized for Vercel;
+                AWS S3 storage is disabled because server bills are scary. 😂
+              </span>
+            </>
+          }
           videoSource='/pcd001.mp4'
           links={[
             {
@@ -133,6 +143,11 @@ const Portfolio = () => {
               type: "facebook",
               url: "https://www.facebook.com/groups/2204857406/posts/10161452786522407/",
               label: "Event Buzz",
+            },
+            {
+              type: "demo",
+              url: "https://pcd001.vercel.app/step-welcome",
+              label: "Live Demo",
             },
           ]}
         />
