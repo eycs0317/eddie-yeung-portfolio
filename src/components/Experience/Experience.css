@@ -1,0 +1,19 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+.embla__container {
+  display: flex;
+  /* If axis is 'y', change to column */
+  flex-direction: column;
+  height: 200px; /* Essential for Y-axis carousels */
+  align-items: center;
+
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-height: 0;
+  width: 100%;
+
+
+}
