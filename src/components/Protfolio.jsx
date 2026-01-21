@@ -137,7 +137,7 @@ const Portfolio = () => {
           ]}
         />
         <Projects
-          title='Fruity Land Online Appointment System'
+          title='Fruity Land Appointment System'
           description='Interactive 55" touchscreen experience for HK MTR malls. Users design custom digital cards and retrieve them via QR code.'
           images={["/01.png", "/02.png", "/03.png", "/04.png"]}
           links={[

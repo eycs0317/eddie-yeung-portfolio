@@ -24,6 +24,7 @@ export default function Projects({
               muted
               loop
               playsInline
+              poster='/monchhichi-poster.png'
               className='h-full object-cover p-2'
             >
               <source src={videoSource} type='video/mp4' />
@@ -47,9 +48,9 @@ export default function Projects({
         {/* Text content */}
         <div className='flex-1 w-full'>
           <div className='flex items-center gap-2 mb-2'>
-            <span className='px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full'>
+            {/* <span className='px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full'>
               New
-            </span>
+            </span> */}
             <h2 className='text-3xl md:text-2xl font-bold'>{title}</h2>
           </div>
           <p className='text-slate-500 mb-6'>{description}</p>
