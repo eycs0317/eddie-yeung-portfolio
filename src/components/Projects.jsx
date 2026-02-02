@@ -16,7 +16,7 @@ export default function Projects({
 }) {
   return (
     <div className='md:col-span-4 row-span-1 bg-white rounded-[3rem] p-4 shadow-sm border border-white group cursor-pointer overflow-hidden'>
-      <div className='flex flex-col md:flex-row gap-8 items-center h-full'>
+      <div className='flex flex-col md:flex-row gap-8 items-start md:items-center h-full'>
         <div className=' hidden md:flex w-1/3 h-full bg-slate-100 rounded-2xl flex items-center justify-center text-slate-300 overflow-hidden'>
           {videoSource && (
             <video
@@ -47,23 +47,24 @@ export default function Projects({
         </div>
         {/* Text content */}
         <div className='flex-1 w-full'>
-          <div className='flex items-center gap-2 mb-2'>
+          <div className='flex items-center '>
             {/* <span className='px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full'>
               New
             </span> */}
             <h2 className='text-3xl md:text-2xl font-bold'>{title}</h2>
           </div>
-          <p className='text-slate-500 mb-6'>{description}</p>
+          <p className='text-slate-500 mb-4 text-left'>{description}</p>
           <div className='flex gap-4'>
             {links.map((link, index) => {
               const config = linkConfig[link.type] || linkConfig.default;
               const Icon = config.icon;
               return (
                 <a
+                  key={index}
                   href={link.url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-900 rounded-xl font-bold transition-colors hover:bg-slate-300 shadow-sm'
+                  className='flex items-center gap-2 p-4 py-2 bg-slate-100 text-slate-900 rounded-xl font-bold transition-colors hover:bg-slate-300 shadow-sm'
                 >
                   <Icon size={18} />
                   {link.label}

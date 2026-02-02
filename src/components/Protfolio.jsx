@@ -66,19 +66,6 @@ const Portfolio = () => {
         </a>
         {/* 6. Experience (Wide) */}
         <Experience />
-        <div className='md:col-span-2 bg-white rounded-[2rem] p-8 shadow-sm border border-white flex items-center justify-between'>
-          <div>
-            <p className='text-sm text-slate-400 font-bold uppercase tracking-widest'>
-              Latest Work
-            </p>
-            <div>
-              <p className='text-lg font-bold'>Freelance Developer</p>
-              <p className='text-slate-500'>2023 — Present</p>
-            </div>
-          </div>
-          <div className='hidden sm:block h-12 w-12 bg-slate-100 rounded-xl'></div>
-        </div>
-
         {/* 7. Social Links (Small) */}
         <div className='bg-white rounded-[2rem] p-6 shadow-sm border border-white flex justify-around items-center md:flex-col'>
           <a
