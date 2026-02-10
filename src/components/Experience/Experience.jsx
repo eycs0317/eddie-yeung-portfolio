@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Experience.css";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
@@ -72,6 +72,17 @@ export default function Experience() {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
     Autoplay({ delay: 1800 }),
   ]);
+
+  // Restart autoplay when modal closes
+  useEffect(() => {
+    if (!isModalOpen && emblaApi) {
+      const autoplay = emblaApi.plugins()?.autoplay;
+      if (autoplay) {
+        autoplay.play();
+      }
+    }
+  }, [isModalOpen, emblaApi]);
+
   return (
     <>
       <section className='embla md:col-span-1 bg-white rounded-[2rem] p-8 shadow-sm border border-white flex flex-col group cursor-pointer hover:shadow-lg transition-all'>
