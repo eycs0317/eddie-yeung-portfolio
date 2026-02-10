@@ -140,12 +140,12 @@ const Portfolio = () => {
         />
         <Projects
           title='Fruity Land Appointment System'
-          description='Interactive 55" touchscreen experience for HK MTR malls. Users design custom digital cards and retrieve them via QR code.'
+          description='Appointment system made for Fruity Land.'
           images={["/01.png", "/02.png", "/03.png", "/04.png"]}
           links={[
             {
               type: "github",
-              url: "https://github.com/eycs0317/pcd001",
+              url: "https://github.com/eycs0317/fruityland?tab=readme-ov-file",
               label: "Source",
             },
           ]}

@@ -6,7 +6,7 @@
   display: flex;
   /* If axis is 'y', change to column */
   flex-direction: column;
-  height: 200px; /* Essential for Y-axis carousels */
+  height: 100px; /* Essential for Y-axis carousels */
   align-items: center;
 
 }

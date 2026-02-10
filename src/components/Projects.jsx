@@ -1,11 +1,6 @@
-import { ExternalLink, Github, Facebook, Globe } from "lucide-react";
-
-const linkConfig = {
-  github: { icon: Github, color: "bg-slate-900", label: "Source" },
-  facebook: { icon: Facebook, color: "bg-[#1877F2]", label: "Facebook" },
-  demo: { icon: ExternalLink, color: "bg-blue-600", label: "Live Demo" },
-  default: { icon: Globe, color: "bg-slate-500", label: "Link" },
-};
+import { useState } from "react";
+import { ChevronRight } from "lucide-react";
+import ProjectModal from "./ProjectModal";
 
 export default function Projects({
   title,
@@ -14,86 +9,86 @@ export default function Projects({
   images,
   links,
 }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className='md:col-span-4 row-span-1 bg-white rounded-[3rem] p-4 shadow-sm border border-white group cursor-pointer overflow-hidden'>
-      <div className='flex flex-col md:flex-row gap-8 items-start md:items-center h-full'>
-        <div className=' hidden md:flex w-1/3 h-full bg-slate-100 rounded-2xl flex items-center justify-center text-slate-300 overflow-hidden'>
-          {videoSource && (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster='/monchhichi-poster.png'
-              className='h-full object-cover p-2'
-            >
-              <source src={videoSource} type='video/mp4' />
-            </video>
-          )}
-          {!videoSource && images && (
-            <div
-              className={`grid h-full w-full p-2 gap-2 ${images.length > 1 ? "grid-cols-4" : "grid-cols-1"}`}
-            >
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Project screenshot ${index}`}
-                  className='w-full h-full object-cover rounded-xl shadow-sm'
-                />
-              ))}
-            </div>
-          )}
-        </div>
-        {/* Text content */}
-        <div className='flex-1 w-full'>
-          <div className='flex items-center '>
-            {/* <span className='px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full'>
-              New
-            </span> */}
-            <h2 className='text-3xl md:text-2xl font-bold'>{title}</h2>
-          </div>
-          <p className='text-slate-500 mb-4 text-left'>{description}</p>
-          <div className='flex gap-4'>
-            {links.map((link, index) => {
-              const config = linkConfig[link.type] || linkConfig.default;
-              const Icon = config.icon;
-              return (
-                <a
-                  key={index}
-                  href={link.url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center gap-2 p-4 py-2 bg-slate-100 text-slate-900 rounded-xl font-bold transition-colors hover:bg-slate-300 shadow-sm'
-                >
-                  <Icon size={18} />
-                  {link.label}
-                </a>
-              );
-            })}
-            {/* <a
-              href={githubLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-900 rounded-xl font-bold transition-colors hover:bg-slate-300 shadow-sm'
-            >
-              <Github size={18} />
-              Source
-            </a>
-            {facebookLink && (
-              <a
-                href='https://www.facebook.com/groups/2204857406/posts/10161452786522407/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='flex items-center gap-2 px-4 py-2 bg-slate-100 text-white rounded-xl font-bold transition-all hover:opacity-90 shadow-sm'
+    <>
+      <div
+        onClick={() => setIsModalOpen(true)}
+        className='md:col-span-4 row-span-1 bg-white rounded-[2rem] p-6 shadow-sm border border-white group cursor-pointer overflow-hidden hover:shadow-lg transition-all'
+      >
+        <div className='flex flex-col md:flex-row gap-6 items-start md:items-center h-full'>
+          {/* Preview Media - Left Side */}
+          <div className='w-full md:w-1/3 h-40 md:h-full bg-slate-100 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center'>
+            {videoSource && (
+              <video
+                muted
+                loop
+                playsInline
+                poster='/monchhichi-poster.png'
+                className='w-full h-full object-contain'
+                onMouseEnter={(e) => e.target.play()}
+                onMouseLeave={(e) => e.target.pause()}
               >
-                <Facebook size={18} fill='currentColor' />
-                Event Buzz
-              </a>
-            )} */}
+                <source src={videoSource} type='video/mp4' />
+              </video>
+            )}
+            {!videoSource && images && (
+              <div
+                className={`grid w-full h-fullgap-2 p-2 ${
+                  images.length > 1
+                    ? `grid-cols-${images.length}`
+                    : "grid-cols-1"
+                }`}
+              >
+                {images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`${title} screenshot ${index + 1}`}
+                    className='w-full h-full object-contain rounded-lg'
+                  />
+                ))}
+              </div>
+            )}
+            {!videoSource && !images && (
+              <div className='w-full h-full flex items-center justify-center text-slate-300'>
+                No preview
+              </div>
+            )}
+          </div>
+
+          {/* Content - Right Side */}
+          <div className='flex-1 flex flex-col justify-between h-full'>
+            <div>
+              <h2 className='text-2xl md:text-3xl font-bold mb-3 group-hover:text-blue-600 transition-colors'>
+                {title}
+              </h2>
+              <p className='text-slate-500 line-clamp-2'>{description}</p>
+            </div>
+
+            {/* View More Arrow */}
+            <div className='flex items-center justify-end mt-4 text-slate-400 group-hover:text-blue-600 transition-colors'>
+              <span className='text-sm font-medium mr-1'>View Details</span>
+              <ChevronRight
+                size={18}
+                className='group-hover:translate-x-1 transition-transform'
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Modal */}
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={title}
+        description={description}
+        videoSource={videoSource}
+        images={images}
+        links={links}
+      />
+    </>
   );
 }
