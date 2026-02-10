@@ -58,13 +58,13 @@ export default function Experience() {
 
   const handlePrev = () => {
     setSelectedIndex((prev) =>
-      prev > 0 ? prev - 1 : workExperience.length - 1
+      prev > 0 ? prev - 1 : workExperience.length - 1,
     );
   };
 
   const handleNext = () => {
     setSelectedIndex((prev) =>
-      prev < workExperience.length - 1 ? prev + 1 : 0
+      prev < workExperience.length - 1 ? prev + 1 : 0,
     );
   };
 

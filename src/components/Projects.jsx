@@ -35,10 +35,14 @@ export default function Projects({
             )}
             {!videoSource && images && (
               <div
-                className={`grid w-full h-fullgap-2 p-2 ${
-                  images.length > 1
-                    ? `grid-cols-${images.length}`
-                    : "grid-cols-1"
+                className={`grid w-full h-full gap-2 p-2 ${
+                  images.length === 1
+                    ? "grid-cols-1"
+                    : images.length === 2
+                      ? "grid-cols-2"
+                      : images.length === 3
+                        ? "grid-cols-3"
+                        : "grid-cols-4"
                 }`}
               >
                 {images.map((img, index) => (
