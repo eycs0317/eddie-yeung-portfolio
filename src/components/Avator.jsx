@@ -1,6 +1,6 @@
 export default function Avator() {
   return (
-    <div className='md:col-span-2 md:row-span-1 bg-white dark:bg-slate-800 rounded-[2rem] p-8 flex justify-around items-center shadow-sm border border-white dark:border-slate-700'>
+    <div className='col-span-4 md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 flex justify-around items-center shadow-sm border border-white dark:border-slate-700'>
       <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden shadow-lg'>
         <img
           src='/avator-headshot.png'

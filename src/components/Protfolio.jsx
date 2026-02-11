@@ -18,12 +18,12 @@ import ThemeToggle from "./ThemeToggle";
 
 const Portfolio = () => {
   return (
-    <div className='min-h-screen bg-[#f5f5f7] dark:bg-neutral-900 p-4 md:p-10 font-sans text-slate-900 dark:text-slate-100 rounded-[2rem]'>
-      <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]'>
+    <div className='min-h-screen bg-[#f5f5f7] dark:bg-neutral-900  sm:p-2 md:p-8 font-sans text-slate-900 dark:text-slate-100 rounded-[2rem]'>
+      <div className='max-w-6xl mx-auto grid  grid-cols-4  gap-4 auto-rows-[180px]'>
         {/* 1. Name & Image (Large) */}
         <Avator />
         {/* 2. About Me (Wide) */}
-        <div className='md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-center'>
+        <div className='col-span-4 row-span-1 md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-center'>
           <h3 className='text-sm uppercase tracking-widest text-slate-400 dark:text-slate-500 font-bold mb-2'>
             About
           </h3>
@@ -33,31 +33,28 @@ const Portfolio = () => {
             AI and web performance.
           </p>
         </div>
+        {/* 6. Experience (Wide) */}
+        <Experience />
         {/* 3. Tech Stack (Square) */}
-        {/* <div className='bg-white rounded-[2rem] p-6 shadow-sm border border-white flex flex-col justify-between hover:scale-[1.02] transition-transform'>
-          <Code2 className='text-blue-500' size={28} />
-          <div>
-            <p className='font-bold'>Tech Stack</p>
-            <p className='text-xs text-slate-400'>
-              React, Nextjs, Tailwind, Node, Firebase
-            </p>
-          </div>
-        </div> */}
         <TechStack />
         {/* 4. Work Status (Square) */}
-        <div className='bg-emerald-50 dark:bg-emerald-900/30 rounded-[2rem] p-6 border border-emerald-100 dark:border-emerald-800 flex flex-col justify-between'>
+        <div className='col-span-2 sm:col-span-1  bg-emerald-50 dark:bg-emerald-900/30 rounded-[2rem] p-6 border border-emerald-100 dark:border-emerald-800 flex flex-col justify-between'>
           <div className='flex justify-between items-start'>
             <div className='h-3 w-3 bg-emerald-500 rounded-full animate-pulse' />
           </div>
           <div>
-            <p className='text-emerald-700 dark:text-emerald-400 font-bold'>Available</p>
-            <p className='text-xs text-emerald-600 dark:text-emerald-500'>Open for new projects</p>
+            <p className='text-emerald-700 dark:text-emerald-400 font-bold'>
+              Available
+            </p>
+            <p className='text-xs text-emerald-600 dark:text-emerald-500'>
+              Open for new projects
+            </p>
           </div>
         </div>
         {/* 5. Resume (Square) */}
         <a
           href='/EddieYeung.pdf'
-          className='group bg-slate-900 dark:bg-slate-700 rounded-[2rem] p-6 flex flex-col justify-between text-white hover:bg-slate-800 dark:hover:bg-slate-600 transition-all'
+          className='col-span-2 sm:col-span-1  group bg-slate-900 dark:bg-slate-700 rounded-[2rem] p-6 flex flex-col justify-between text-white hover:bg-slate-800 dark:hover:bg-slate-600 transition-all '
         >
           <FileText
             className='group-hover:rotate-12 transition-transform'
@@ -65,10 +62,9 @@ const Portfolio = () => {
           />
           <p className='font-bold'>Resume</p>
         </a>
-        {/* 6. Experience (Wide) */}
-        <Experience />
+
         {/* 7. Social Links (Small) */}
-        <div className='bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex justify-around items-center md:flex-col'>
+        <div className='col-span-2 sm:col-span-1  bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex justify-around items-center md:flex-col'>
           <a
             href='https://github.com/eycs0317'
             target='_blank'
@@ -93,7 +89,7 @@ const Portfolio = () => {
           </a>
         </div>
         {/* Location */}
-        <div className='bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm border border-white dark:border-slate-700 overflow-hidden relative group h-full'>
+        <div className='col-span-2 sm:col-span-1  bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm border border-white dark:border-slate-700 overflow-hidden relative group h-full'>
           {/* The Map iframe */}
           <div className='absolute inset-0 -bottom-15 -top-10'>
             <iframe

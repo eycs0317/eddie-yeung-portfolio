@@ -14,12 +14,20 @@ import {
 export default function TechStack() {
   const icons = [
     { Icon: RiReactjsLine, color: "text-blue-500", name: "React" },
-    { Icon: RiNextjsLine, color: "text-black dark:text-white", name: "Next.js" },
+    {
+      Icon: RiNextjsLine,
+      color: "text-black dark:text-white",
+      name: "Next.js",
+    },
     { Icon: RiTailwindCssLine, color: "text-cyan-400", name: "Tailwind" },
     { Icon: RiNodejsLine, color: "text-green-500", name: "Node.js" },
     { Icon: RiFirebaseLine, color: "text-orange-500", name: "Firebase" },
     { Icon: RiJavascriptLine, color: "text-yellow-400", name: "JavaScript" },
-    { Icon: RiGithubFill, color: "text-slate-800 dark:text-slate-300", name: "GitHub" },
+    {
+      Icon: RiGithubFill,
+      color: "text-slate-800 dark:text-slate-300",
+      name: "GitHub",
+    },
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -42,7 +50,7 @@ export default function TechStack() {
 
   return (
     <div
-      className='bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-between overflow-hidden relative h-full group/main'
+      className='col-span-2 sm:col-span-1  bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-between overflow-hidden relative h-full group/main'
       onMouseLeave={onMouseLeave}
     >
       <div className='z-10'>

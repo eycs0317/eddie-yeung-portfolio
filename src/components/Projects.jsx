@@ -15,7 +15,7 @@ export default function Projects({
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className='md:col-span-4 row-span-1 bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 group cursor-pointer overflow-hidden hover:shadow-lg transition-all'
+        className='col-span-4 sm:col-span-4  bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 group cursor-pointer overflow-hidden hover:shadow-lg transition-all'
       >
         <div className='flex flex-col md:flex-row gap-6 items-start md:items-center h-full'>
           {/* Preview Media - Left Side */}
@@ -68,7 +68,9 @@ export default function Projects({
               <h2 className='text-2xl md:text-3xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors'>
                 {title}
               </h2>
-              <p className='text-slate-500 dark:text-slate-400 line-clamp-2'>{description}</p>
+              <p className='text-slate-500 dark:text-slate-400 line-clamp-2'>
+                {description}
+              </p>
             </div>
 
             {/* View More Arrow */}
