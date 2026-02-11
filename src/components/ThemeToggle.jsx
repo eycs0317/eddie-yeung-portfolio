@@ -20,17 +20,17 @@ export default function ThemeToggle() {
     <div className='bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex items-center justify-center'>
       <button
         onClick={() => setIsDark(!isDark)}
-        className='relative w-18 h-10 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-100'
-        style={{
-          backgroundColor: isDark ? "#86aded" : "#cbced1",
-        }}
+        className={`relative w-18 h-10 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-100 ${isDark ? "bg-blue-800" : "bg-gray-300"}`}
+        // style={{
+        //   backgroundColor: isDark ? "#86aded" : "#cbced1",
+        // }}
         aria-label='Toggle theme'
       >
         <span
-          className='absolute top-2 left-2 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-base'
-          style={{
-            transform: isDark ? "translateX(30px)" : "translateX(0)",
-          }}
+          className={`absolute top-2 left-2 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-base ${isDark ? "translate-x-[30px]" : "translate-x-0"}`}
+          // style={{
+          //   transform: isDark ? "translateX(30px)" : "translateX(0)",
+          // }}
         >
           {isDark ? "🌙" : "☀️"}
         </span>
