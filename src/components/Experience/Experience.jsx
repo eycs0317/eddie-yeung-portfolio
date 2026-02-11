@@ -85,9 +85,9 @@ export default function Experience() {
 
   return (
     <>
-      <section className='embla md:col-span-1 bg-white rounded-[2rem] p-8 shadow-sm border border-white flex flex-col group cursor-pointer hover:shadow-lg transition-all'>
+      <section className='embla md:col-span-1 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col group cursor-pointer hover:shadow-lg transition-all'>
         {/* Static Header */}
-        <p className='text-sm text-slate-400 font-bold uppercase tracking-widest text-center'>
+        <p className='text-sm text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest text-center'>
           Work Experience
         </p>
 
@@ -103,11 +103,11 @@ export default function Experience() {
                 key={index}
                 onClick={() => handleExperienceClick(index)}
               >
-                <p className='text-lg font-bold group-hover:text-blue-600 transition-colors'>
+                <p className='text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors'>
                   {experience.role}
                 </p>
-                <p className='text-slate-700'>{experience.company}</p>
-                <p className='text-slate-500 text-sm'>{experience.duration}</p>
+                <p className='text-slate-700 dark:text-slate-300'>{experience.company}</p>
+                <p className='text-slate-500 dark:text-slate-400 text-sm'>{experience.duration}</p>
               </div>
             ))}
           </div>

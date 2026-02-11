@@ -14,12 +14,12 @@ import {
 export default function TechStack() {
   const icons = [
     { Icon: RiReactjsLine, color: "text-blue-500", name: "React" },
-    { Icon: RiNextjsLine, color: "text-black", name: "Next.js" },
+    { Icon: RiNextjsLine, color: "text-black dark:text-white", name: "Next.js" },
     { Icon: RiTailwindCssLine, color: "text-cyan-400", name: "Tailwind" },
     { Icon: RiNodejsLine, color: "text-green-500", name: "Node.js" },
     { Icon: RiFirebaseLine, color: "text-orange-500", name: "Firebase" },
     { Icon: RiJavascriptLine, color: "text-yellow-400", name: "JavaScript" },
-    { Icon: RiGithubFill, color: "text-slate-800", name: "GitHub" },
+    { Icon: RiGithubFill, color: "text-slate-800 dark:text-slate-300", name: "GitHub" },
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -42,12 +42,12 @@ export default function TechStack() {
 
   return (
     <div
-      className='bg-white rounded-[2rem] p-6 shadow-sm border border-white flex flex-col justify-between overflow-hidden relative h-full group/main'
+      className='bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-between overflow-hidden relative h-full group/main'
       onMouseLeave={onMouseLeave}
     >
       <div className='z-10'>
-        <p className='font-bold text-slate-900'>Tech Stack</p>
-        <p className='text-[10px] text-slate-400 font-medium uppercase tracking-widest'>
+        <p className='font-bold text-slate-900 dark:text-white'>Tech Stack</p>
+        <p className='text-[10px] text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest'>
           Always Learning
         </p>
       </div>
@@ -64,7 +64,7 @@ export default function TechStack() {
                 className='flex-[0_0_90px] min-w-0 flex flex-col items-center justify-center relative group/icon'
               >
                 {/* Tooltip Name */}
-                <span className='absolute -top-4 text-[10px] font-bold text-slate-500 opacity-0 group-hover/icon:opacity-100 group-hover/icon:-translate-y-2 transition-all duration-300 pointer-events-none uppercase tracking-tighter'>
+                <span className='absolute -top-4 text-[10px] font-bold text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 group-hover/icon:-translate-y-2 transition-all duration-300 pointer-events-none uppercase tracking-tighter'>
                   {name}
                 </span>
 

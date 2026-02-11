@@ -40,20 +40,20 @@ export default function ProjectModal({
       onClick={onClose}
     >
       <div
-        className='bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl'
+        className='bg-white dark:bg-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl'
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className='sticky top-0 bg-white border-b border-slate-200 px-8 py-6 flex items-center justify-between rounded-t-3xl'>
-          <h2 className='text-2xl md:text-3xl font-bold text-slate-900'>
+        <div className='sticky top-0 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-8 py-6 flex items-center justify-between rounded-t-3xl'>
+          <h2 className='text-2xl md:text-3xl font-bold text-slate-900 dark:text-white'>
             {title}
           </h2>
           <button
             onClick={onClose}
-            className='p-2 hover:bg-slate-100 rounded-full transition-colors'
+            className='p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition-colors'
             aria-label='Close modal'
           >
-            <X size={24} className='text-slate-600' />
+            <X size={24} className='text-slate-600 dark:text-slate-300' />
           </button>
         </div>
 
@@ -61,7 +61,7 @@ export default function ProjectModal({
         <div className='p-8 space-y-6'>
           {/* Media Section */}
           {videoSource && (
-            <div className='w-full bg-slate-100 rounded-2xl overflow-hidden'>
+            <div className='w-full bg-slate-100 dark:bg-slate-700 rounded-2xl overflow-hidden'>
               <video
                 autoPlay
                 muted
@@ -97,7 +97,7 @@ export default function ProjectModal({
           )}
 
           {/* Description */}
-          <div className='text-slate-600 leading-relaxed'>{description}</div>
+          <div className='text-slate-600 dark:text-slate-300 leading-relaxed'>{description}</div>
 
           {/* Links */}
           <div className='flex flex-wrap gap-3 pt-4'>
@@ -110,7 +110,7 @@ export default function ProjectModal({
                   href={link.url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex items-center gap-2 px-5 py-3 bg-slate-900 text-white rounded-xl font-bold transition-all hover:bg-slate-700 shadow-sm'
+                  className='flex items-center gap-2 px-5 py-3 bg-slate-900 dark:bg-slate-700 text-white rounded-xl font-bold transition-all hover:bg-slate-700 dark:hover:bg-slate-600 shadow-sm'
                 >
                   <Icon size={18} />
                   {link.label}

@@ -14,19 +14,20 @@ import Avator from "./Avator";
 import TechStack from "./TechStack";
 import Projects from "./Projects";
 import Experience from "./Experience/Experience";
+import ThemeToggle from "./ThemeToggle";
 
 const Portfolio = () => {
   return (
-    <div className='min-h-screen bg-[#f5f5f7] p-4 md:p-10 font-sans text-slate-900 rounded-[2rem]'>
+    <div className='min-h-screen bg-[#f5f5f7] dark:bg-neutral-900 p-4 md:p-10 font-sans text-slate-900 dark:text-slate-100 rounded-[2rem]'>
       <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]'>
         {/* 1. Name & Image (Large) */}
         <Avator />
         {/* 2. About Me (Wide) */}
-        <div className='md:col-span-2 bg-white rounded-[2rem] p-8 shadow-sm border border-white flex flex-col justify-center'>
-          <h3 className='text-sm uppercase tracking-widest text-slate-400 font-bold mb-2'>
+        <div className='md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-center'>
+          <h3 className='text-sm uppercase tracking-widest text-slate-400 dark:text-slate-500 font-bold mb-2'>
             About
           </h3>
-          <p className='text-slate-600 leading-relaxed'>
+          <p className='text-slate-600 dark:text-slate-300 leading-relaxed'>
             I build scalable web applications with a focus on clean code and
             intuitive user interfaces. Currently exploring the intersection of
             AI and web performance.
@@ -44,19 +45,19 @@ const Portfolio = () => {
         </div> */}
         <TechStack />
         {/* 4. Work Status (Square) */}
-        <div className='bg-emerald-50 rounded-[2rem] p-6 border border-emerald-100 flex flex-col justify-between'>
+        <div className='bg-emerald-50 dark:bg-emerald-900/30 rounded-[2rem] p-6 border border-emerald-100 dark:border-emerald-800 flex flex-col justify-between'>
           <div className='flex justify-between items-start'>
             <div className='h-3 w-3 bg-emerald-500 rounded-full animate-pulse' />
           </div>
           <div>
-            <p className='text-emerald-700 font-bold'>Available</p>
-            <p className='text-xs text-emerald-600'>Open for new projects</p>
+            <p className='text-emerald-700 dark:text-emerald-400 font-bold'>Available</p>
+            <p className='text-xs text-emerald-600 dark:text-emerald-500'>Open for new projects</p>
           </div>
         </div>
         {/* 5. Resume (Square) */}
         <a
           href='/EddieYeung.pdf'
-          className='group bg-slate-900 rounded-[2rem] p-6 flex flex-col justify-between text-white hover:bg-slate-800 transition-all'
+          className='group bg-slate-900 dark:bg-slate-700 rounded-[2rem] p-6 flex flex-col justify-between text-white hover:bg-slate-800 dark:hover:bg-slate-600 transition-all'
         >
           <FileText
             className='group-hover:rotate-12 transition-transform'
@@ -67,14 +68,14 @@ const Portfolio = () => {
         {/* 6. Experience (Wide) */}
         <Experience />
         {/* 7. Social Links (Small) */}
-        <div className='bg-white rounded-[2rem] p-6 shadow-sm border border-white flex justify-around items-center md:flex-col'>
+        <div className='bg-white dark:bg-slate-800 rounded-[2rem] p-6 shadow-sm border border-white dark:border-slate-700 flex justify-around items-center md:flex-col'>
           <a
             href='https://github.com/eycs0317'
             target='_blank'
             rel='noopener noreferrer'
             className='transition-transform hover:scale-110'
           >
-            <Github className='text-slate-400 hover:text-black cursor-pointer' />
+            <Github className='text-slate-400 dark:text-slate-500 hover:text-black dark:hover:text-white cursor-pointer' />
           </a>
           <a
             href='https://www.linkedin.com/in/eddiecyeung/'
@@ -82,29 +83,30 @@ const Portfolio = () => {
             rel='noopener noreferrer'
             className='transition-transform hover:scale-110'
           >
-            <Linkedin className='text-slate-400 hover:text-blue-600 cursor-pointer' />
+            <Linkedin className='text-slate-400 dark:text-slate-500 hover:text-blue-600 cursor-pointer' />
           </a>
           <a
             href='mailto:eycs0317@gmail.com'
             className='transition-transform hover:scale-110'
           >
-            <Mail className='text-slate-400 hover:text-green-500 cursor-pointer' />
+            <Mail className='text-slate-400 dark:text-slate-500 hover:text-green-500 cursor-pointer' />
           </a>
         </div>
         {/* Location */}
-        <div className='bg-white rounded-[2rem] shadow-sm border border-white overflow-hidden relative group h-full'>
+        <div className='bg-white dark:bg-slate-800 rounded-[2rem] shadow-sm border border-white dark:border-slate-700 overflow-hidden relative group h-full'>
           {/* The Map iframe */}
           <div className='absolute inset-0 -bottom-15 -top-10'>
             <iframe
               title='Google Map'
               src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d433959.7553627028!2d-122.28722824664096!3d37.50066425345607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1767912605331!5m2!1sen!2sus'
-              className='w-full h-full grayscale-[20%] contrast-[1.1] brightness-[1.05] border-0'
+              className='w-full h-full grayscale-[20%] contrast-[1.1] brightness-[1.05] dark:brightness-[0.8] border-0'
               allowFullScreen=''
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
           </div>
         </div>
+        <ThemeToggle />
         {/* 8. Projects (Extra Wide) */}
         <Projects
           title='Monchhichi E-card Kiosk'
