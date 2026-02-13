@@ -44,7 +44,7 @@ export default function Experience() {
       company: "Lexus of Serramonte",
       duration: "2004 — 2020",
       detail: `• Provided exceptional customer service and support for luxury automotive clients
-• Managed client relationships and maintained high customer satisfaction ratings
+• Managed client relationships and maintained high customer satisfaction index(CSI)
 • Coordinated service appointments and communicated technical information to clients
 • Developed strong problem-solving and communication skills through client interactions
 • Consistently exceeded performance targets and received recognition for service excellence`,

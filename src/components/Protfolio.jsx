@@ -149,6 +149,16 @@ const Portfolio = () => {
               url: "https://github.com/eycs0317/fruityland?tab=readme-ov-file",
               label: "Source",
             },
+            {
+              type: "instagram",
+              url: "https://www.instagram.com/maritimesquarehk/p/DLr0ooYMUr8/",
+              label: "Event Buzz",
+            },
+            {
+              type: "demo",
+              url: "https://www.summergofresh.com/",
+              label: "Live Demo",
+            },
           ]}
         />
       </div>

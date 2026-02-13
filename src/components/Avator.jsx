@@ -9,7 +9,7 @@ export default function Avator() {
         />
       </div>
       <div>
-        <h1 className='text-4xl font-bold tracking-tight text-slate-900 dark:text-white'>
+        <h1 className='text-4xl font-sans font-bold tracking-tight text-slate-900 dark:text-white'>
           Eddie Yeung
         </h1>
         <p className='text-slate-500 dark:text-slate-400 font-medium mt-2'>
