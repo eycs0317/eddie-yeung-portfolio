@@ -9,10 +9,17 @@ import {
   RiFirebaseLine,
   RiJavascriptLine,
   RiGithubFill,
+  RiHtml5Line,
+  RiCss3Line,
 } from "react-icons/ri";
+import { SiTypescript, SiStorybook, SiPrisma } from "react-icons/si";
 
 export default function TechStack() {
   const icons = [
+    { Icon: RiHtml5Line, color: "text-orange-600", name: "HTML5" },
+    { Icon: RiCss3Line, color: "text-blue-600", name: "CSS3" },
+    { Icon: RiJavascriptLine, color: "text-yellow-400", name: "JavaScript" },
+    { Icon: SiTypescript, color: "text-blue-500", name: "TypeScript" },
     { Icon: RiReactjsLine, color: "text-blue-500", name: "React" },
     {
       Icon: RiNextjsLine,
@@ -21,8 +28,9 @@ export default function TechStack() {
     },
     { Icon: RiTailwindCssLine, color: "text-cyan-400", name: "Tailwind" },
     { Icon: RiNodejsLine, color: "text-green-500", name: "Node.js" },
+    { Icon: SiPrisma, color: "text-slate-700 dark:text-slate-300", name: "Prisma" },
     { Icon: RiFirebaseLine, color: "text-orange-500", name: "Firebase" },
-    { Icon: RiJavascriptLine, color: "text-yellow-400", name: "JavaScript" },
+    { Icon: SiStorybook, color: "text-pink-500", name: "Storybook" },
     {
       Icon: RiGithubFill,
       color: "text-slate-800 dark:text-slate-300",
@@ -61,7 +69,7 @@ export default function TechStack() {
       </div>
 
       <div
-        className='overflow-hidden py-8 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]'
+        className='overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]'
         ref={emblaRef}
       >
         <div className='flex'>
@@ -71,15 +79,13 @@ export default function TechStack() {
                 key={index}
                 className='flex-[0_0_90px] min-w-0 flex flex-col items-center justify-center relative group/icon'
               >
-                {/* Tooltip Name */}
-                <span className='absolute -top-4 text-[10px] font-bold text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 group-hover/icon:-translate-y-2 transition-all duration-300 pointer-events-none uppercase tracking-tighter'>
-                  {name}
-                </span>
-
                 <Icon
                   className={`${color} transition-all duration-300 group-hover/icon:scale-110 group-hover/icon:drop-shadow-sm`}
                   size={45}
                 />
+                <span className='text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-tight text-center'>
+                  {name}
+                </span>
               </div>
             ),
           )}
