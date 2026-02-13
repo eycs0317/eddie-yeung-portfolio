@@ -18,19 +18,20 @@ import ThemeToggle from "./ThemeToggle";
 
 const Portfolio = () => {
   return (
-    <div className='min-h-screen bg-[#f5f5f7] dark:bg-neutral-900  sm:p-2 md:p-8 font-sans text-slate-900 dark:text-slate-100 rounded-[2rem]'>
-      <div className='max-w-6xl mx-auto grid  grid-cols-4  gap-4 auto-rows-[180px]'>
+    <div className='min-h-screen bg-[#f5f5f7] dark:bg-neutral-900 p-4 md:p-8 font-sans text-slate-900 dark:text-slate-100 rounded-[2rem] overflow-x-hidden'>
+      <div className='max-w-6xl mx-auto grid md:grid-cols-4 gap-4 auto-rows-[180px] w-full'>
         {/* 1. Name & Image (Large) */}
         <Avator />
         {/* 2. About Me (Wide) */}
-        <div className='col-span-4 row-span-1 md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-center'>
-          <h3 className='text-sm uppercase tracking-widest text-slate-400 dark:text-slate-500 font-bold mb-2'>
+        <div className='col-span-4 row-span-1 sm:row-span-1 md:col-span-2 bg-white dark:bg-slate-800 rounded-[2rem] p-8 shadow-sm border border-white dark:border-slate-700 flex flex-col justify-center text-left'>
+          <h3 className='text-sm text-center uppercase tracking-widest text-slate-400 dark:text-slate-500 font-bold mb-2'>
             About
           </h3>
-          <p className='text-slate-600 dark:text-slate-300 leading-relaxed'>
-            I build scalable web applications with a focus on clean code and
-            intuitive user interfaces. Currently exploring the intersection of
-            AI and web performance.
+          <p className='text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-sm md:text-sm lg:text-base'>
+            I’m a Frontend Engineer with a Full-Stack backbone, specializing in
+            interactive storytelling. By blending design sensibility with an
+            AI-driven workflow, I translate complex ideas into web app, I build
+            for high-impact visuals and peak performance.
           </p>
         </div>
         {/* 6. Experience (Wide) */}
