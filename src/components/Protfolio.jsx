@@ -109,13 +109,15 @@ const Portfolio = () => {
           title='Monchhichi E-card Kiosk'
           description={
             <>
-              Interactive 55" touchscreen experience for HK MTR malls. Users
-              design custom digital cards and retrieve them via QR code.
-              <span className='mt-2 text-xs text-slate-400 italic'>
-                *In the original kiosk version, a QR code was provided to
-                download the E-card. This demo version is optimized for Vercel;
-                AWS S3 storage is disabled because server bills are scary. 😂
+              "Designed for 55-inch Android touch-screens, creating an immersive
+              'large-format' experience for HK MTR malls. Users design custom
+              digital cards and retrieve them via QR code for social sharing.
+              <span className='mt-2 block text-xs text-slate-400 italic'>
+                {" "}
+                *Original kiosk version utilized QR/AWS S3 storage; this demo is
+                optimized for Vercel (minus the server bills! 😂).{" "}
               </span>
+              "
             </>
           }
           videoSource='/pcd001.mp4'
