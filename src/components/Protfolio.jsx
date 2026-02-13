@@ -70,6 +70,7 @@ const Portfolio = () => {
             href='https://github.com/eycs0317'
             target='_blank'
             rel='noopener noreferrer'
+            aria-label='Github'
             className='transition-transform hover:scale-110'
           >
             <Github className='text-slate-400 dark:text-slate-500 hover:text-black dark:hover:text-white cursor-pointer' />
@@ -78,6 +79,7 @@ const Portfolio = () => {
             href='https://www.linkedin.com/in/eddiecyeung/'
             target='_blank'
             rel='noopener noreferrer'
+            aria-label='Linkedin'
             className='transition-transform hover:scale-110'
           >
             <Linkedin className='text-slate-400 dark:text-slate-500 hover:text-blue-600 cursor-pointer' />
@@ -85,6 +87,7 @@ const Portfolio = () => {
           <a
             href='mailto:eycs0317@gmail.com'
             className='transition-transform hover:scale-110'
+            aria-label='Email'
           >
             <Mail className='text-slate-400 dark:text-slate-500 hover:text-green-500 cursor-pointer' />
           </a>
