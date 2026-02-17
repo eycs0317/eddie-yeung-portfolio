@@ -97,7 +97,9 @@ export default function ProjectModal({
           )}
 
           {/* Description */}
-          <div className='text-slate-600 dark:text-slate-300 leading-relaxed'>{description}</div>
+          <div className='text-slate-600 dark:text-slate-300 leading-relaxed'>
+            {description}
+          </div>
 
           {/* Links */}
           <div className='flex flex-wrap gap-3 pt-4'>

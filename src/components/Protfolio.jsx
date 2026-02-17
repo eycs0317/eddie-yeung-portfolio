@@ -109,6 +109,23 @@ const Portfolio = () => {
         <ThemeToggle />
         {/* 8. Projects (Extra Wide) */}
         <Projects
+          title='Chrome Dino Game with Phone Control'
+          description='A fun project where I recreated the Chrome Dino Game, but with a twist – you can control it using your phone! Built with Nextjs for the game interface and Socket.IO for real-time communication.'
+          images={["/modal.png"]}
+          links={[
+            {
+              type: "github",
+              url: "https://github.com/eycs0317/dino-game-frontend",
+              label: "Source",
+            },
+            {
+              type: "demo",
+              url: "https://dino-game-frontend.vercel.app/",
+              label: "Live Demo",
+            },
+          ]}
+        />
+        <Projects
           title='Monchhichi E-card Kiosk'
           description={
             <>
